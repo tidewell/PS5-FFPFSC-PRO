@@ -3,6 +3,24 @@
 ════════════════════════════════════════════════════════════════════════
 
 ────────────────────────────────────────────────────────────────────────
+  Unreleased
+────────────────────────────────────────────────────────────────────────
+
+DEPENDENCY UPDATES
+
+  • MkPFS updated from 0.0.9 to 1.1.0 (bundled in backend/mkpfs)
+  • UnRAR updated from 7.21 to 7.23 (vendored in backend/unrar/src)
+  • pip pins moved to mkpfs==1.1.0 in RUN.bat, BUILD_EXE.bat and the
+    fallback install in backend/cli.py
+  • New exFAT images always use 64 KiB clusters, as required by the
+    ShadowMountPlus LVD and BFS fast path
+  • Compression uses zlib-ng, with the standard zlib as a fallback.
+    ISA-L is never selected automatically (PSBrew/MkPFS#132)
+  • The application keeps its own default compression level of 9
+  • See docs/DEPENDENCIES.md for the full list of changes, the update
+    procedure and test results
+
+────────────────────────────────────────────────────────────────────────
   v1.3.0  (current)
 ────────────────────────────────────────────────────────────────────────
 
