@@ -221,6 +221,17 @@ The application provides detailed error messages and recommended fixes whenever 
 
 ---
 
+## 📦 Dependencies
+
+| Component | Version | Location |
+| --- | --- | --- |
+| MkPFS | 1.1.0 | `backend/mkpfs` |
+| UnRAR | 7.23 | `backend/unrar/src` |
+
+See [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md) for Python packages, runtime behavior, the changes in each update, update instructions and test results.
+
+---
+
 ## 🙏 Credits
 
 ### Compression Backend
