@@ -53,7 +53,7 @@ APP_NAME = "PS5 FFPFSC PRO"
 APP_VERSION = "1.3.0"
 BACKEND_NAME = "bizkut/ps5-ffpfs-cli"
 MKPFS_NAME    = "MkPFS"
-MKPFS_VERSION = "0.0.9"
+MKPFS_VERSION = "1.1.0"
 
 APP_DIR = Path(os.getenv("APPDATA", str(Path.home()))) / "PS5_FFPFSC_PRO_BIZKUT"
 RAW_LOG_FILE = APP_DIR / "raw_tool_output.log"

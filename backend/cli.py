@@ -183,14 +183,14 @@ def _locate_mkpfs() -> tuple[list[str], str | None]:
     # Auto-install via pip
     print("[INFO] MkPFS not found. Installing automatically via pip...")
     res = subprocess.run(
-        [sys.executable, "-m", "pip", "install", "mkpfs==0.0.9"],
+        [sys.executable, "-m", "pip", "install", "mkpfs==1.1.0"],
         capture_output=True, text=True,
     )
     if res.returncode != 0:
         print("[ERROR] Failed to install mkpfs. Please install it manually: pip install mkpfs")
         print(res.stderr)
         sys.exit(1)
-    print("[OK] MkPFS 0.0.9 installed successfully.")
+    print("[OK] MkPFS 1.1.0 installed successfully.")
     return [sys.executable, "-m", "mkpfs"], None
 
 
