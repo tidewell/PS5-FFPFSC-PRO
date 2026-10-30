@@ -2349,8 +2349,13 @@ class App:
         content.grid_rowconfigure(0, weight=1)
 
         # ── Left: Queue + Options ────────────────────────────────────────────
-        left = self.panel(content, row=0, column=0, sticky="nsew", padx=(0, 10))
-        left.grid_columnconfigure(0, weight=1)
+        left_outer = self.panel(content, row=0, column=0, sticky="nsew", padx=(0, 10))
+        left_outer.grid_columnconfigure(0, weight=1)
+        left_outer.grid_rowconfigure(0, weight=1)
+        left_scroll = ctk.CTkScrollableFrame(left_outer, fg_color="transparent")
+        left_scroll.grid(row=0, column=0, sticky="nsew")
+        left_scroll.grid_columnconfigure(0, weight=1)
+        left = left_scroll
 
         ctk.CTkLabel(left, text="QUEUE", font=ctk.CTkFont(size=16, weight="bold"),
                       text_color=WHITE).grid(row=0, column=0, sticky="w", padx=14, pady=(14, 4))
@@ -3156,7 +3161,10 @@ class App:
         # Maximize window so the What's New dialog has a proper backdrop —
         # only when auto-triggered on first launch / after update, not from Help tab
         if _is_new_version and not force:
-            self.root.state("zoomed")
+            if sys.platform == "linux":
+                self.root.attributes("-zoomed", True)
+            else:
+                self.root.state("zoomed")
 
         win = ctk.CTkToplevel(self.root)
         win.title(f"What's New in v{APP_VERSION}")
@@ -3249,7 +3257,7 @@ class App:
                       hover_color=("#b0b0b0", "#2a2a2a"), width=140,
                       command=_tour).pack(side="right", padx=(0, 8))
         ctk.CTkButton(btn_row, text="Skip", fg_color="transparent", text_color=MUTED,
-                      hover_color=("transparent", "transparent"),
+                      hover_color="#333333",
                       command=_dismiss).pack(side="left")
 
     def _start_feature_tour(self):
@@ -3399,7 +3407,7 @@ class App:
 
         ctk.CTkButton(btn_r, text="Skip Tour", fg_color="transparent",
                       text_color=("#8ab0d0", "#7090b0"),
-                      hover_color=("transparent", "transparent"),
+                      hover_color="#333333",
                       height=26, font=ctk.CTkFont(size=11),
                       command=_close_tip).pack(side="left")
 
