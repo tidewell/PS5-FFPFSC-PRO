@@ -192,6 +192,20 @@ The application handles the rest.
 
 ---
 
+## 🐧 Linux
+
+Run the application from source:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install customtkinter pillow tkinterdnd2 py7zr rarfile cryptography zlib-ng
+.venv/bin/python PS5_FFPFSC_PRO_v1.3.0.py
+```
+
+See [docs/LINUX.md](docs/LINUX.md) for system packages, data locations, troubleshooting and the Linux interface fixes.
+
+---
+
 ## 🛠️ Common Issues
 
 ### Out of Memory

@@ -3,6 +3,20 @@
 ════════════════════════════════════════════════════════════════════════
 
 ────────────────────────────────────────────────────────────────────────
+  Unreleased
+────────────────────────────────────────────────────────────────────────
+
+LINUX INTERFACE FIXES
+
+  • What's New no longer fails on Linux with TclError: bad argument
+    "zoomed". The window now maximizes through the -zoomed attribute
+  • Skip and Skip Tour buttons no longer fail with customtkinter 6.0.0.
+    They use a solid hover color instead of a transparent tuple
+  • The left column now scrolls, so lower options stay reachable on
+    short windows
+  • See docs/LINUX.md for setup instructions and details of each fix
+
+────────────────────────────────────────────────────────────────────────
   v1.3.0  (current)
 ────────────────────────────────────────────────────────────────────────
 
