@@ -33,6 +33,16 @@ Whether you're compressing a single game, batch processing multiple titles, or b
 
 ---
 
+## 🍴 About This Fork
+
+This is a fork of [KINGDKAK/PS5-FFPFSC-PRO](https://github.com/KINGDKAK/PS5-FFPFSC-PRO). The `all-fixes` branch combines every change made here:
+
+* MkPFS 1.1.0 and UnRAR 7.23: [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md)
+* Linux interface fixes: [docs/LINUX.md](docs/LINUX.md)
+* Remotes, branches and workflow: [docs/BRANCHES.md](docs/BRANCHES.md)
+
+---
+
 ## 🖼️ Screenshots
 
 ### Main Window
