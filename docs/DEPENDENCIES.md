@@ -291,7 +291,7 @@ the install command above.
 | Unpacked bytes, MkPFS 0.0.9 compared with 1.1.0 | Same, 9,205,625 |
 | Image created with 0.0.9 read by 1.1.0 | Passed |
 | Application parses the progress output into stages | Passed |
-| Upstream 1.1.0 test suite run against `backend/mkpfs` | 505 passed, 1 skipped |
+| Upstream 1.1.0 test suite run against `backend/mkpfs` | 503 passed, 3 skipped (505 passed, 1 skipped with `isal` installed) |
 | `backend/tests` | 1 passed, 3 skipped (no `sample.rar` in the repository) |
 | Compiled UnRAR 7.23 extracts three RAR3 and RAR5 samples | Same as system `unrar` |
 | `backend/cli.py` extraction step on a `.rar` after the documented build | Passed |
